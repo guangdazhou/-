@@ -1,0 +1,66 @@
++------+--------+------+---------------------+-------+
+| sno  | sname  | ssex | sbirthday           | class |
++------+--------+------+---------------------+-------+
+| 108  | 曾华   | 男   | 1977-09-01 00:00:00 | 95033 |
+| 105  | 匡明   | 男   | 1975-10-02 00:00:00 | 95031 |
+| 107  | 王丽   | 女   | 1976-01-23 00:00:00 | 95033 |
+| 101  | 李军   | 男   | 1976-02-20 00:00:00 | 95033 |
+| 109  | 王芳   | 女   | 1975-02-10 00:00:00 | 95031 |
+| 103  | 陆君   | 男   | 1974-06-03 00:00:00 | 95031 |
++------+--------+------+---------------------+-------+
+
++------+-------+--------+
+| sno  | cno   | degree |
++------+-------+--------+
+| 103  | 3-245 |     86 |
+| 105  | 3-245 |     75 |
+| 109  | 3-245 |     68 |
+| 103  | 3-105 |     92 |
+| 105  | 3-105 |     88 |
+| 109  | 3-105 |     76 |
+| 103  | 3-105 |     64 |
+| 105  | 3-105 |     91 |
+| 109  | 3-105 |     78 |
+| 103  | 6-166 |     85 |
+| 105  | 6-166 |     79 |
+| 109  | 6-166 |     81 |
++------+-------+--------+
+#1、 查询Student表中的所有记录的Sname、Ssex和Class列
+select sname,ssex,class from student;
+
+#2、 查询学生的生日即不重复的sbirthday列
+select distinct sbirthday from student;
+
+#3、 查询Student表的所有记录
+select * from student;
+
+#4、 查询Score表中成绩在60到80之间的所有记录
+select * from score where degree between 60 and 80;
+
+#5、 查询Score表中成绩为85，86或88的记录
+select * from score where degree in (85,86,88);
+
+#6、 查询Student表中“95031”班或性别为“女”的同学记录
+select * from student where class = "95031" or ssex="女";
+
+#7、 以Class降序查询Student表的所有记录
+select * from student order by class desc;
+
+#8、 以Cno升序、Degree降序查询Score表的所有记录
+select * from score order by cno,degree desc;
+
+#9、 查询“95031”班的学生人数
+select count(*) from student where class= "95031";
+
+#10、查询Score表中的最高分的学生学号和课程号
+select sno,cno from score where degree = (select max(degree) from score);
+
+#11、查询每门课的平均成绩
+select cno,avg(degree) from score group by cno;
+
+#12、查询Score表中至少有5名学生选修的并以3开头的课程的平均分数
+select cno,avg(degree) from score where cno like "3%" group by cno having count(cno)>=5;
+
+#13、查询分数大于70，小于90的Sno列
+select sno,degree from score where degree>70 and degree < 90;
+

@@ -1,0 +1,15 @@
+1.su root
+
+2.输入mysql进入mysql数据库
+
+3.use mysql,使用系统的mysql数据库
+
+4.update user set authentication_string=password('123456') where user='root';
+
+5.update user set plugin="mysql_native_password";
+
+6.flush privileges;
+
+7.exit
+
+8.mysql -u root  -p   输入密码:123456

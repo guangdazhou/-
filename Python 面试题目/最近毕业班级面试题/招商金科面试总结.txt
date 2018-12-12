@@ -1,0 +1,16 @@
+总体来说比较简单， 面的是python 爬虫
+基础没问， 前端没问， 主要是爬虫相关的内容（两个面试官同时面试都懂一点爬虫）
+1. scrapy 与scrapy-redis 的区别
+2. scrapy 的源码
+3. spiderMiddleware，downloadMiddleware 可以实现的功能
+4. scrapy 的工作原理及流程，具体里面五个部分的功能
+5. 给你几台服务器，不用redis 实现分布式
+6. 针对mysql存储速度过慢怎么处理
+7. mysql 优化查询速度，index 怎么处理
+8. 不用scrapy框架自己设计爬虫框架(不模仿scrapy)，主要是整个爬虫逻辑的解耦思想
+9. scrapy实现多线程，多进程，对于线程锁怎么处理，GIL处理
+10. 简单数据清洗，numpy，pandas，matplotlib用到什么程度
+11. 爬虫项目的总体流程
+12. selenium + PhantomJS 真正的用途（没答上这里），叫我要再研究一下
+13. 是否有遇到各种各样的中文乱码， 怎么处理， 是否修改过爬虫包的源码解决
+大概就这些， 其他不记得了，面试过程反复强调不用redis，让我感觉公司是不是缺钱。。。

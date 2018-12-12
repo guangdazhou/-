@@ -1,0 +1,100 @@
+1、元组和列表的区别。
+定义方式不同，元组通过()定义,列表通过[]定义
+Python中元组中的元素是不可变的
+Python中列表是中的元素是可以修改的
+
+2、给定列表cloudran=["1","4","3","4","5","2"]。请输出排序后的新列表cloudranA
+
+cloudranA = []
+cloudran = ["1", "4", "3", "4", "5", "2"]
+for i in cloudran:
+    temp = ord(i)
+    cloudranA.append(temp)
+cloudranA.sort()
+for j in range(len(cloudranA)):
+    cloudranA[j] = chr(cloudranA[j])
+print(cloudranA)
+
+3、给定列表cloudran=["1","4","3","4","5","2"]。请输出去重后的新列表cloudranA
+
+cloudran=["1","4","3","4","5","2"]
+print(cloudran)
+cloudranA = list(set(cloudran))
+print(cloudranA)
+
+4、实现一个队列(先进先出)
+
+class Queue():
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def size(self):
+        return len(self.items)
+
+    def joinQueue(self, value):
+        self.items.append(value)
+
+    def deQueue(self):
+        self.items.pop(0)
+
+    def show(self):
+        for i in self.items:
+            print(i,end=' ')
+a = Queue()
+
+a.joinQueue(5)
+a.joinQueue(2)
+a.joinQueue(1)
+a.joinQueue(10)
+print(a.size())
+a.deQueue()
+print(a.size())
+a.show()
+
+1、sh和source执行区别
+sh新建一个子shell进程，变量在主shell中无法获取
+
+source在当前shell中执行脚本，变量在主shell即当前shell中可以获取
+
+2、在shell中定义一个名叫cloudran的全局变量；在shell中定义一个名叫cloudran的局部变量
+
+#!/bin/bash
+
+function Hello(){
+     local cloudran="Hello World!!!" #局部变量
+     echo $cloudran
+}
+
+cloudran = "x"
+Hello
+echo $cloudran
+
+
+3、用命令查找cloudran.txt文件位置；用命令查找包含“cloudran”字符串的文件。
+
+find -name cloudran.txt
+
+find . | xargs grep cloudran
+
+
+4、用命令把cloudran1.txt、cloudran2.txt、cloudran3.txt文件中的“cloudran”字符串替换为“CloudRan”
+
+
+编程题： 1、阶乘 1+1*2+1*2*3...+1*2*3..*N(语言不限)
+def factorial(num):
+    sum = 0
+    if type(num) == int:
+        if num == 0 or num < 0:
+            return sum
+        else:
+            sum = 1
+            for i in range(1,num+1):
+                sum = sum * i
+            return sum
+    else:
+        print('输入不合法')
+x = factorial('x')
+print(x)

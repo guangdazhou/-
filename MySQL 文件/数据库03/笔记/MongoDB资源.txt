@@ -1,0 +1,91 @@
+﻿#插入多条数据
+db.mycol.insert([
+   {
+      _id: 101,
+      title: 'MongoDB Guide', 
+      description: 'MongoDB is no sql database',
+      by: 'yiibai tutorials',
+      url: 'http://www.yiibai.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 100
+   },
+
+   {
+      _id: 102,
+      title: 'NoSQL Database', 
+      description: "NoSQL database doesn't have tables",
+      by: 'yiibai tutorials',
+      url: 'http://www.yiibai.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 210, 
+      comments: [
+         {
+            user:'user1',
+            message: 'My first comment',
+            dateCreated: new Date(2017,11,10,2,35),
+            like: 0 
+         }
+      ]
+   },
+   {
+      _id: 104,
+      title: 'Python Quick Guide', 
+      description: "Python Quick start ",
+      by: 'yiibai tutorials',
+      url: 'http://www.yiibai.com',
+      tags: ['Python', 'database', 'NoSQL'],
+      likes: 30, 
+      comments: [
+         {
+            user:'user1',
+            message: 'My first comment',
+            dateCreated: new Date(2018,11,10,2,35),
+            like: 590 
+         }
+      ]
+   }
+])
+
+
+
+
+
+
+
+db.article.insert([
+{
+   _id: 100,
+   title: 'MongoDB Overview',
+   description: 'MongoDB is no sql database',
+   by_user: 'Maxsu',
+   url: 'http://www.yiibai.com',
+   tags: ['mongodb', 'database', 'NoSQL'],
+   likes: 100
+},
+{
+   _id: 101,
+   title: 'NoSQL Overview', 
+   description: 'No sql database is very fast',
+   by_user: 'Maxsu',
+   url: 'http://www.yiibai.com',
+   tags: ['mongodb', 'database', 'NoSQL'],
+   likes: 10
+},
+{
+   _id: 102,
+   title: 'Neo4j Overview', 
+   description: 'Neo4j is no sql database',
+   by_user: 'Kuber',
+   url: 'http://www.neo4j.com',
+   tags: ['neo4j', 'database', 'NoSQL'],
+   likes: 750
+},
+{
+   _id: 103,
+   title: 'MySQL Overview', 
+   description: 'MySQL is sql database',
+   by_user: 'Curry',
+   url: 'http://www.yiibai.com/mysql/',
+   tags: ['MySQL', 'database', 'SQL'],
+   likes: 350
+}])

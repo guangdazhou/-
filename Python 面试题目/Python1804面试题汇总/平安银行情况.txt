@@ -1,0 +1,23 @@
+今儿大boss不在，其他技术员面的，问的比较简单
+1、问了一些shell的基本命令，包括查询文件/端口占用的命令？
+https://www.cnblogs.com/wangtao1993/p/6144183.html
+
+2、redis的数据类型有哪些，有哪些是比较常用的？
+3、在shell 中如何写条件语句，其中[[]]  [] 的区别？https://blog.csdn.net/u013402321/article/details/80333272
+
+4、他们的项目可能会做一些前端的东西，问是否抵触？
+
+5、问了简单的sql查询语句，包括limit限制那些
+
+6、问是否了解socket?
+https://www.cnblogs.com/aylin/p/5572104.html
+
+7、问有没有有使用过分布式框架？
+https://blog.csdn.net/freeking101/article/details/74707619
+
+8、问是否了解数据库引擎，用过哪几种？
+https://www.cnblogs.com/zhangjinghe/p/7599988.html
+
+9、REST的风格变成的情况？
+
+
